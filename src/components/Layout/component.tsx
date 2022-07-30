@@ -6,7 +6,7 @@ interface LayoutProps {
 }
 
 const Layout = styled.div(({ theme }) => {
-  console.log(theme);
+  // console.log(theme);
   return {
     width: '100%',
     height: 'calc(100% - 56px)',

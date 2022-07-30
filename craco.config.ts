@@ -7,6 +7,7 @@ const config = () => ({
       '@icons': resolve(__dirname, 'src/assets/icons'),
       '@components': resolve(__dirname, 'src/components'),
       '@theming': resolve(__dirname, 'src/theming'),
+      '@contexts': resolve(__dirname, 'src/contexts'),
     },
   },
 });

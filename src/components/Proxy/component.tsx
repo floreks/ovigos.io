@@ -1,16 +1,23 @@
 import { Layout, Toolbar } from '@components';
-import theme from '@theming/theme';
+import PaletteContext from '@contexts/PaletteContext';
+import theme, { defaultPaletteID } from '@theming/theme';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 export default function Proxy() {
-  const t = theme();
+  const [ palette, setPalette ] = useState(defaultPaletteID);
+  const t = theme(palette);
+
+  console.log(palette);
 
   return (
-    <ThemeProvider theme={t}>
-      <Layout>
-        <Toolbar></Toolbar>
-        Lorem ipsum dolor
-      </Layout>
-    </ThemeProvider>
+    <PaletteContext.Provider value={{ palette, setPalette }}>
+      <ThemeProvider theme={t}>
+        <Layout>
+          <Toolbar></Toolbar>
+          Lorem ipsum dolor
+        </Layout>
+      </ThemeProvider>
+    </PaletteContext.Provider>
   );
 }

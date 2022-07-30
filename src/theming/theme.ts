@@ -1,11 +1,13 @@
 import { default as defaultPalette } from './default/palette';
+import { default as nanoPalette } from './nano/palette';
 
-type PaletteIdentifier = 'Default';
+export type PaletteIdentifier = 'Default' | 'Nano';
 type PaletteColor = { [key: number]: string };
 type Palette = { [key in keyof typeof defaultPalette]: PaletteColor };
 
 const identifierToPalette: { [key in PaletteIdentifier]: Palette } = {
   Default: defaultPalette,
+  Nano: nanoPalette,
 };
 
 const spacing = {
@@ -41,6 +43,8 @@ const fillColor = (palette: Palette) => ({
   fillOne: palette.background[850],
   fillOneHover: palette.background[800],
 });
+
+export const defaultPaletteID: PaletteIdentifier = 'Default';
 
 export type Theme = typeof theme & Palette;
 

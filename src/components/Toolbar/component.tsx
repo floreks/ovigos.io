@@ -1,3 +1,4 @@
+import { ThemeSwitcher } from '@components';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
@@ -21,7 +22,13 @@ const Toolbar = styled.div(({ theme }) => {
 });
 
 function Ref(): JSX.Element {
-  return (<Toolbar></Toolbar>);
+
+
+  return (
+    <Toolbar>
+      <ThemeSwitcher />
+    </Toolbar>
+  );
 }
 
 export default forwardRef(Ref);

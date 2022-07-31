@@ -3,19 +3,18 @@ import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 const Toolbar = styled.div(({ theme }) => {
-  console.log(theme);
   return {
     width: '100%',
-    height: '56px',
+    height: theme.layout.elements.toolbarHeight,
     position: 'fixed',
     top: 0,
 
-    background: theme.background[600],
+    background: theme.color.fill.one,
     opacity: .85,
     transition: 'opacity 100ms ease-in',
 
     ':hover': {
-      background: theme.background[550],
+      background: theme.color.fill.oneHover,
       opacity: 1,
     },
   };

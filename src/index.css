@@ -6,3 +6,14 @@ body {
 div#root {
     height: 100vh;
 }
+
+/* Font registration */
+@font-face {
+    font-family: 'RobotoMono';
+    src: local('RobotoMono'), url('assets/fonts/roboto-mono/RobotoMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), url('assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}

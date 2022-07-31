@@ -1,8 +1,8 @@
-import { defaultPaletteID, PaletteIdentifier } from '@theming/theme';
+import * as Palette from '@theming/palette';
 import { createContext, Dispatch } from 'react';
 
-const PaletteContext = createContext<{ palette: PaletteIdentifier, setPalette: Dispatch<PaletteIdentifier> }>({
-  palette: defaultPaletteID,
+const PaletteContext = createContext<{ palette: Palette.ID, setPalette: Dispatch<Palette.ID> }>({
+  palette: Palette.DEFAULT,
   setPalette: () => {},
 });
 

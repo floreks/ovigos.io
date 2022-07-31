@@ -6,15 +6,16 @@ interface LayoutProps {
 }
 
 const Layout = styled.div(({ theme }) => {
-  // console.log(theme);
   return {
     width: '100%',
-    height: 'calc(100% - 56px)',
-    minHeight: '600px',
+    height: `calc(100% - ${theme.layout.elements.toolbarHeight}px)`,
+    minHeight: theme.layout.elements.minWindowHeight,
 
-    color: 'white',
-    paddingTop: '56px',
-    background: theme.background[800],
+    color: theme.color.text.zero,
+    paddingTop: theme.layout.elements.toolbarHeight,
+    background: theme.color.fill.zero,
+
+    fontFamily: theme.font.family.default,
   };
 });
 

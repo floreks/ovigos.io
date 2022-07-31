@@ -4,12 +4,14 @@ import { font } from '@theming/font';
 import * as Palette from '@theming/palette';
 import { resolvePalette } from '@theming/palette';
 import { layout } from '@theming/layout';
+import { effect } from '@theming/shadow';
 
 /** PRIVATE **/
 const theme = {
   layout,
   border,
   font,
+  effect,
 };
 
 /** INTERFACES **/

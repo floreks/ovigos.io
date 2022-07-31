@@ -8,14 +8,18 @@ interface LayoutProps {
 const Layout = styled.div(({ theme }) => {
   return {
     width: '100%',
-    height: `calc(100% - ${theme.layout.elements.toolbarHeight}px)`,
-    minHeight: theme.layout.elements.minWindowHeight,
+    height: '100vh',
+    overflow: 'overlay',
 
     color: theme.color.text.zero,
-    paddingTop: theme.layout.elements.toolbarHeight,
-    background: theme.color.fill.zero,
+    backgroundColor: theme.color.fill.zero,
 
     fontFamily: theme.font.family.default,
+
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: theme.layout.spacing.large,
   };
 });
 

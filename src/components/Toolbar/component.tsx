@@ -5,24 +5,17 @@ import styled from 'styled-components';
 const Toolbar = styled.div(({ theme }) => {
   return {
     width: '100%',
-    height: theme.layout.elements.toolbarHeight,
-    position: 'fixed',
+    minHeight: theme.layout.elements.toolbarHeight,
+    position: 'sticky',
     top: 0,
 
     background: theme.color.fill.one,
-    opacity: .85,
-    transition: 'opacity 100ms ease-in',
-
-    ':hover': {
-      background: theme.color.fill.oneHover,
-      opacity: 1,
-    },
+    opacity: .95,
+    boxShadow: theme.effect.shadow.default,
   };
 });
 
 function Ref(): JSX.Element {
-
-
   return (
     <Toolbar>
       <ThemeSwitcher />

@@ -10,7 +10,7 @@ export const spacing = {
 type Spacing = typeof spacing;
 
 export const elements = {
-  toolbarHeight: 64,
+  toolbarHeight: 96,
   minWindowHeight: 600,
 };
 

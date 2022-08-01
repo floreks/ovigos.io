@@ -2,10 +2,14 @@ import { ThemeSwitcher } from '@components';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
-const Toolbar = styled.div(({ theme }) => {
+interface ToolbarProps {
+  height?: number,
+}
+
+const Toolbar = styled.div<ToolbarProps>(({ height, theme }) => {
   return {
     width: '100%',
-    minHeight: theme.layout.elements.toolbarHeight,
+    minHeight: height || theme.layout.elements.toolbarHeight,
     position: 'sticky',
     top: 0,
 
